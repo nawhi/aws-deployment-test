@@ -1,3 +1,13 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:5.0.0'
+    }
+}
+
+apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'java'
 
 repositories {
@@ -14,6 +24,15 @@ dependencies {
     testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.3.1'
     testCompile group: 'org.hamcrest', name: 'hamcrest', version: '2.1'
     testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+}
+
+shadowJar {
+    archiveBaseName = 'application'
+    archiveClassifier = null
+
+    manifest {
+        attributes 'Main-Class': 'server.Main'
+    }
 }
 
 test {

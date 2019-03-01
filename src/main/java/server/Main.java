@@ -1,3 +1,5 @@
+package server;
+
 import spark.Spark;
 
 import static spark.Spark.get;
