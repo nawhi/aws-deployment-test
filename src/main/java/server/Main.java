@@ -9,6 +9,6 @@ public class Main {
     public static void main(String[] args) {
         Spark.port(8080);
 
-        get("/", (req, res) -> "HELLO WORLD\n");
+        get("/", (req, res) -> "This is Java 8 - HELLO WORLD\n");
     }
 }

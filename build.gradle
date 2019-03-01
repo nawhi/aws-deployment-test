@@ -14,7 +14,8 @@ repositories {
     mavenCentral()
 }
 
-sourceCompatibility = 1.11 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 dependencies {
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
