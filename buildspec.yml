@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+       - chmod +x ./gradlew && ./gradlew check
+  build:
+    commands:
+       - chmod +x ./gradlew && ./gradlew shadowJar
+
+artifacts:
+  files:
+     - build/libs/application.jar
+  discard-paths: yes
